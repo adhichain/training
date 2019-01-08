@@ -16,8 +16,8 @@ app.use(bodyParser.json())
 
 
 if (!module.parent) {
-    app.listen( 3000 )
-    console.log('Running in port 3000');
+    app.listen( 3001 )
+    console.log('Running in port 3001');
 }
 
 
@@ -172,7 +172,7 @@ var abiDefinition = [
   }
 ]
 
-var smartContract = web3.adh.contract(abiDefinition).at(contractAddress);
+var smartContract = web3.eth.contract(abiDefinition).at(contractAddress);
 console.log("smart contract function...", smartContract.listCertificatesCount());
 
 
@@ -205,7 +205,7 @@ app.post('/entry', function(req, res){
       console.log(req.body);
       
       smartContract.putCertificateData( rollNo, name, year, result,
-                                        {from:web3.adh.accounts[0], gas:3000000},
+                                        {from:web3.eth.accounts[0], gas:3000000},
                                         function(err, txn){
 
                                 if (err) 
