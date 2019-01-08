@@ -21,7 +21,7 @@ if (!module.parent) {
 }
 
 
-Web3 = require('web3-adhi')
+Web3 = require('web3')
 web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
 
 var contractAddress = "0x3a19a55fa21f9985e0a869f31408a90bb8a12ac2"
