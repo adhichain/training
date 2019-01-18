@@ -18,6 +18,16 @@ if (!module.parent) {
     console.log('Running in port 3001');
 }
 
+// <<<<<<< HEAD
+// =======
+
+// Web3 = require('web3')
+// web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
+
+// var contractAddress = "0x3a19a55fa21f9985e0a869f31408a90bb8a12ac2"
+
+// >>>>>>> 96e0c59d48e9a70d7c53e4795502d16d249a3e3e
+
 var abiDefinition = [
   {
     "constant": false,
@@ -306,7 +316,6 @@ app.get('/list', function(req, res){
 });
 
 
-
 //
 // if you run node locally with unlocked addresses
 //
@@ -340,3 +349,4 @@ app.post('/entry1', function(req, res){
       }); //smartcontract
 
   }); 
+
